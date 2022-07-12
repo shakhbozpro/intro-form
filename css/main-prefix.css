@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
    font-family: 'Poppins';
    font-style: normal;
@@ -47,7 +54,8 @@ html {
 }
 
 * {
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
 }
 
 body {
@@ -105,9 +113,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .main-wrapper {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   align-items: center;
-   justify-content: space-between;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
 }
 
 .main-start {
@@ -135,7 +149,8 @@ h1, h2, h3, h4, h5, h6, p {
 .paid-system {
    padding: 17px 110px;
    background-color: var(--siyoh);
-   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+   -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+           box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
    border-radius: 10px;
    font-weight: 700;
    font-size: 15px;
@@ -152,10 +167,16 @@ h1, h2, h3, h4, h5, h6, p {
 .form {
    padding: 40px;
    background-color: var(--white);
-   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+   -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+           box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
    border-radius: 10px;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
 }
 
 .form-label {
@@ -180,6 +201,42 @@ h1, h2, h3, h4, h5, h6, p {
    border-color: var(--siyoh);
 }
 
+.form-input::-webkit-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 26px;
+   letter-spacing: 0.25px;
+   color: var(--black);
+   opacity: 0.75;
+}
+
+.form-input::-moz-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 26px;
+   letter-spacing: 0.25px;
+   color: var(--black);
+   opacity: 0.75;
+}
+
+.form-input:-ms-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 26px;
+   letter-spacing: 0.25px;
+   color: var(--black);
+   opacity: 0.75;
+}
+
+.form-input::-ms-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 26px;
+   letter-spacing: 0.25px;
+   color: var(--black);
+   opacity: 0.75;
+}
+
 .form-input::placeholder {
    font-weight: 600;
    font-size: 14px;
@@ -189,12 +246,36 @@ h1, h2, h3, h4, h5, h6, p {
    opacity: 0.75;
 }
 
+.form-input:not(:-moz-placeholder-shown):not(:focus):invalid {
+   border: 2px solid var(--red);
+   background-image: url("./../images/invalid.svg");
+   background-repeat: no-repeat;
+   background-size: 24px;
+   background-position: right 27px center;
+}
+
+.form-input:not(:-ms-input-placeholder):not(:focus):invalid {
+   border: 2px solid var(--red);
+   background-image: url("./../images/invalid.svg");
+   background-repeat: no-repeat;
+   background-size: 24px;
+   background-position: right 27px center;
+}
+
 .form-input:not(:placeholder-shown):not(:focus):invalid {
    border: 2px solid var(--red);
    background-image: url("./../images/invalid.svg");
    background-repeat: no-repeat;
    background-size: 24px;
    background-position: right 27px center;
+}
+
+.form-input:not(:-moz-placeholder-shown):not(:focus):invalid + .invalid-text {
+   display: block;
+}
+
+.form-input:not(:-ms-input-placeholder):not(:focus):invalid + .invalid-text {
+   display: block;
 }
 
 .form-input:not(:placeholder-shown):not(:focus):invalid + .invalid-text {
@@ -223,7 +304,8 @@ h1, h2, h3, h4, h5, h6, p {
    background-color: var(--green);
    padding: 0;
    padding: 15px 133px;
-   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+   -webkit-box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+           box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
    border-radius: 5px;
 }
 
