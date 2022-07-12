@@ -1,3 +1,47 @@
+@font-face {
+   font-family: 'Poppins';
+   font-style: normal;
+   font-display: swap;
+   font-weight: 400;
+   src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+        url('../fonts/poppins-v20-latin-regular.woff') format('woff');
+ }
+
+ @font-face {
+   font-family: 'Poppins';
+   font-style: normal;
+   font-display: swap;
+   font-weight: 500;
+   src: url('../fonts/poppins-v20-latin-500.woff2') format('woff2'),
+        url('../fonts/poppins-v20-latin-500.woff') format('woff');
+ }
+
+ @font-face {
+   font-family: 'Poppins';
+   font-style: italic;
+   font-weight: 500;
+   src: url('../fonts/poppins-v20-latin-500italic.woff2') format('woff2'),
+        url('../fonts/poppins-v20-latin-500italic.woff') format('woff');
+ }
+
+ @font-face {
+   font-family: 'Poppins';
+   font-style: normal;
+   font-display: swap;
+   font-weight: 600;
+   src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2'),
+        url('../fonts/poppins-v20-latin-600.woff') format('woff');
+ }
+
+ @font-face {
+   font-family: 'Poppins';
+   font-style: normal;
+   font-display: swap;
+   font-weight: 700;
+   src: url('../fonts/poppins-v20-latin-700.woff2') format('woff2'),
+        url('../fonts/poppins-v20-latin-700.woff') format('woff');
+ }
+
 html {
    scroll-behavior: smooth;
 }
@@ -10,6 +54,18 @@ body {
    margin: 0;
    padding: 0;
    font-size: 16px;
+   background-image: url("./../images/bg-img.jpg");
+   padding-top: 121px;
+   padding-bottom: 121px;
+   font-family: "Poppins", "Arial", sans-serif;
+}
+
+:root {
+   --red: #FF7979;
+   --green: #38CC8B;
+   --siyoh: #5E54A4;
+   --black: #3d3b48;
+   --white: #ffffff;
 }
 
 img {
@@ -46,49 +102,155 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .main {
-   
+}
+
+.main-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 
 .main-start {
-   
+   width: 525px;
 }
 
 .main-heading {
-   
+   font-size: 50px;
+   line-height: 55px;
+   letter-spacing: -0.520833px;
+   color: var(--white);
+   margin-bottom: 11px;
 }
 
 .main-text {
-   
+   font-weight: 500;
+   line-height: 26px;
+   color: var(--white);
 }
 
 .main-end {
-   
+   width: 540px;
 }
 
 .paid-system {
-   
+   padding: 17px 110px;
+   background-color: var(--siyoh);
+   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+   border-radius: 10px;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 26px;
+   letter-spacing: 0.267857px;
+   color: var(--white);
+   margin-bottom: 24px;
+}
+
+.paid-system-text {
+   font-weight: 400;
 }
 
 .form {
-
+   padding: 40px;
+   background-color: var(--white);
+   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
 }
 
 .form-label {
-
+   margin-bottom: 20px;
 }
 
 .form-input {
+   width: 100%;
+   padding: 15px 32px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 26px;
+   letter-spacing: 0.25px;
+   border: 1px solid #DEDEDE;
+   border-radius: 5px;
+   outline: none;
+   caret-color: var(--siyoh);
+   margin-bottom: 6px;
+}
 
+.form-input:focus {
+   border-color: var(--siyoh);
+}
+
+.form-input::placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 26px;
+   letter-spacing: 0.25px;
+   color: var(--black);
+   opacity: 0.75;
+}
+
+.form-input:not(:placeholder-shown):not(:focus):invalid {
+   border: 2px solid var(--red);
+   background-image: url("./../images/invalid.svg");
+   background-repeat: no-repeat;
+   background-size: 24px;
+   background-position: right 27px center;
+}
+
+.form-input:not(:placeholder-shown):not(:focus):invalid + .invalid-text {
+   display: block;
+}
+
+.invalid-text {
+   font-style: italic;
+   font-weight: 500;
+   font-size: 11px;
+   line-height: 16px;
+   text-align: right;
+   color: var(--red);
+   display: none;
 }
 
 .form-btn {
+   font-weight: 600;
+   font-size: 15px;
+   line-height: 26px;
+   letter-spacing: 1px;
+   color: var(--white);
+   margin-bottom: 8px;
+   border: none;
+   background: none;
+   background-color: var(--green);
+   padding: 0;
+   padding: 15px 133px;
+   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+   border-radius: 5px;
+}
+
+.form-btn:hover {
+   cursor: pointer;
+}
+
+.form-btn:active {
+   background-color: var(--green);
+   opacity: 0.7;
+}
+
+.click-text-wrapper {
 
 }
 
 .form-click-text {
-
+   font-weight: 500;
+   font-size: 11px;
+   line-height: 26px;
+   color: #BAB7D4;
 }
 
 .form-click-link {
-   
+   font-weight: 700;
+   color: var(--red);
+   font-size: 14px;
+   line-height: 26px;
+   text-decoration: none;
 }
