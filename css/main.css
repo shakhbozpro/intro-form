@@ -1,0 +1,94 @@
+html {
+   scroll-behavior: smooth;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 16px;
+}
+
+img {
+   display: block;
+   height: 100%;
+   vertical-align: middle;
+}
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   border: 0;
+   clip: rect(0 0 0 0);
+}
+
+.container {
+   max-width: 1150px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+ul, ol {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   margin: 0;
+}
+
+.main {
+   
+}
+
+.main-start {
+   
+}
+
+.main-heading {
+   
+}
+
+.main-text {
+   
+}
+
+.main-end {
+   
+}
+
+.paid-system {
+   
+}
+
+.form {
+
+}
+
+.form-label {
+
+}
+
+.form-input {
+
+}
+
+.form-btn {
+
+}
+
+.form-click-text {
+
+}
+
+.form-click-link {
+   
+}
